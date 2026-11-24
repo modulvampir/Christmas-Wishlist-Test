@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ma liste de Noël</title>
+  <meta name="description" content="Ma wishlist de Noël : cinq idées cadeaux, un lien pour chacune.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"></div>
+  <canvas class="snow" id="snow" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <span class="topbar__name">Liste de Noël 2026 de Lucas !</span>
+    <span class="topbar__count"><i class="pulse" aria-hidden="true"></i><span id="countdown" aria-live="polite"></span></span>
+  </header>
+
+  <main>
+    <!-- HERO : la mosaïque reprend la grille de la couverture d'Archives -->
+    <section class="hero">
+      <div class="hero__text">
+        <h1 class="hero__title"><span class="line"><span>Ma liste</span></span><span class="line"><span>au pied</span></span><span class="line"><span><em>du sapin</em></span></span></h1>
+        <p class="hero__intro">Cinq idées, un lien pour chacune. Clique sur une case pour voir le détail.</p>
+      </div>
+
+      <nav class="mosaic" aria-label="Aperçu des cadeaux">
+        <a class="mosaic__tile" href="#archives" aria-label="Archives, le livre">
+          <img src="images/archives.jpg" alt="" width="900" height="900">
+        </a>
+        <a class="mosaic__tile" href="#lego" aria-label="LEGO Audi F1">
+          <img src="images/lego-audi-f1.jpg" alt="" width="900" height="900">
+        </a>
+        <a class="mosaic__tile" href="#koenigsegg" aria-label="Magazine Koenigsegg">
+          <img src="images/koenigsegg-magazine.jpg" alt="" width="900" height="900">
+        </a>
+        <a class="mosaic__tile" href="#ipad" aria-label="iPad Air">
+          <img src="images/ipad-air.jpg" alt="" width="900" height="900">
+        </a>
+        <a class="mosaic__tile" href="#parfum" aria-label="Parfum Margiela Springtime in a Park">
+          <img src="images/margiela-springtime.jpg" alt="" width="900" height="900">
+        </a>
+        <div class="mosaic__tile mosaic__tile--noel" aria-hidden="true"><span>Joyeux<br>Noël</span></div>
+      </nav>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Ma liste de Noël ✦ Cinq idées ✦ Un lien chacune ✦ Joyeuses fêtes ✦ </span>
+        <span>Ma liste de Noël ✦ Cinq idées ✦ Un lien chacune ✦ Joyeuses fêtes ✦ </span>
+        <span>Ma liste de Noël ✦ Cinq idées ✦ Un lien chacune ✦ Joyeuses fêtes ✦ </span>
+        <span>Ma liste de Noël ✦ Cinq idées ✦ Un lien chacune ✦ Joyeuses fêtes ✦ </span>
+      </div>
+    </div>
+
+    <!-- CADEAUX : remplace les liens href="..." par tes vrais liens -->
+    <section class="gifts">
+
+      <article class="gift reveal" id="archives">
+        <div class="gift__visual">
+          <img src="images/archives.jpg" alt="Couverture du livre Archives de Tedskata" width="900" height="900" loading="lazy">
+        </div>
+        <div class="gift__body">
+          <h2 class="gift__title">Archives</h2>
+          <p class="gift__author">Tedskata</p>
+          <p class="gift__desc">Un livre sur les vêtements : histoires, collections, pièces et citations qui racontent la mode de l'intérieur.</p>
+          <a class="gift__link" href="https://tedskata.shop/products/archives" target="_blank" rel="noopener">Voir le livre</a>
+        </div>
+      </article>
+
+      <article class="gift reveal" id="lego">
+        <div class="gift__visual">
+          <img src="images/lego-audi-f1.jpg" alt="LEGO Speed Champions Audi Revolut F1 Team R26" width="900" height="900" loading="lazy">
+        </div>
+        <div class="gift__body">
+          <h2 class="gift__title">LEGO Audi F1</h2>
+          <p class="gift__author">Speed Champions 77259, Audi Revolut F1 Team R26</p>
+          <p class="gift__desc">216 pièces pour monter la monoplace argent et rouge, avec son pilote en minifigurine.</p>
+          <a class="gift__link" href="https://www.lego.com/fr-fr/search?q=77259" target="_blank" rel="noopener">Voir le set</a>
+        </div>
+      </article>
+
+      <article class="gift reveal" id="koenigsegg">
+        <div class="gift__visual">
+          <img src="images/koenigsegg-magazine.jpg" alt="Couverture du Koenigsegg Magazine 09" width="900" height="900" loading="lazy">
+        </div>
+        <div class="gift__body">
+          <h2 class="gift__title">Koenigsegg Magazine 09</h2>
+          <p class="gift__author">Le numéro de la CCGT1</p>
+          <p class="gift__desc">Au sommaire : la CCGT1, le LEGO Sadair's Spear, la Jesko 125 et la Jesko 0-400-0.</p>
+          <a class="gift__link" href="https://gear.koenigsegg.com/product/koenigsegg-magazine-no-9/" target="_blank" rel="noopener">Voir le magazine</a>
+        </div>
+      </article>
+
+      <article class="gift reveal" id="ipad">
+        <div class="gift__visual">
+          <img src="images/ipad-air.jpg" alt="iPad Air 11 pouces gris sidéral" width="900" height="900" loading="lazy">
+        </div>
+        <div class="gift__body">
+          <h2 class="gift__title">iPad Air</h2>
+          <p class="gift__author">11 pouces, gris sidéral</p>
+          <p class="gift__desc">La tablette pour les cours, les TP et tout le reste, dans un aluminium fin et léger.</p>
+          <a class="gift__link" href="https://www.backmarket.fr/fr-fr/p/ipad-air-m3-11-2025-7e-generation-128-go-wifi-gris-sideral/717972e1-66fe-40ed-a722-94120fb89850?l=10&closestPickerConfig=true&pickerClicked=true#scroll=false" target="_blank" rel="noopener">Voir l'iPad</a>
+        </div>
+      </article>
+
+      <article class="gift reveal" id="parfum">
+        <div class="gift__visual">
+          <img src="images/margiela-springtime.jpg" alt="Parfum Maison Margiela Replica Springtime in a Park" width="900" height="900" loading="lazy">
+        </div>
+        <div class="gift__body">
+          <h2 class="gift__title">Springtime in a Park</h2>
+          <p class="gift__author">Maison Margiela, collection Replica</p>
+          <p class="gift__desc">Un parfum de fleurs et de notes fruitées, inspiré d'un printemps à Shanghai en 2019.</p>
+          <a class="gift__link" href="https://www.my-origines.com/fr/springtime-in-a-park-59L23X02.html?at_medium=cpc&at_source=google&at_brand=myorigines&at_adtype=PMAX&at_theme=Test&at_geo=fr&at_tactic=conv&at_campaign=PMAX_Test_FR_ROAS_V1_RECOVER_300_fr_conv&at_content=x&et_campaign=24043587795&et_device=c&gad_source=1&gad_campaignid=24043608684&gbraid=0AAAAACc6XnlF6jzk9JH2KwXan47d5YZew&gclid=Cj0KCQiAiJXYBhD_ARIsAAx2AHkP2Z07eB48AAMDsgAmK_fgmplx0d-sl_ooVDIW8B--JVOgy_hS94QaAsXzEALw_wcB" target="_blank" rel="noopener">Voir le parfum</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer reveal">
+    <p class="footer__title">Joyeux Noël</p>
+    <p class="footer__text">Merci d'avoir regardé la liste jusqu'au bout.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
